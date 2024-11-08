@@ -1,6 +1,10 @@
 import { strict as assert } from "assert";
 
-const nodeClassTypes = new Set(["String API Node", "Integer API Node"]);
+const nodeClassTypes = new Set([
+  "String API Node",
+  "Integer API Node",
+  "Float API Node",
+]);
 
 export const modifyWorkflow = (workflow: any, options: Record<string, any>) => {
   return Object.fromEntries(
