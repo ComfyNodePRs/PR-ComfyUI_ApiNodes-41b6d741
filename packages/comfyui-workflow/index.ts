@@ -4,6 +4,7 @@ const nodeClassTypes = new Set([
   "String API Node",
   "Integer API Node",
   "Float API Node",
+  "Any API Node",
 ]);
 
 export const modifyWorkflow = (workflow: any, options: Record<string, any>) => {

@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-api-nodes"
+description = "Adds nodes that are designed to be used for scripting ComfyUI. These nodes just describe themselves as 'api'. This can be used in conjunction with the npm library 'comfyui-api-nodes' for scripting via javascript."
+version = "2.51.9"
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/hypnodes/ComfyUI_ApiNodes"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "hypnodes"
+DisplayName = "Api Nodes"
+Icon = "https://github.com/hypnodes/ComfyUI_ApiNodes/icon.png"

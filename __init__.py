@@ -7,6 +7,7 @@ NODE_CLASS_MAPPINGS = {
   "String API Node": StringApiNode,
   "Integer API Node": IntegerApiNode,
   "Float API Node": FloatApiNode,
+  "Any API Node": AnyApiNode,
 }
 
 __all__ = ['NODE_CLASS_MAPPINGS']
