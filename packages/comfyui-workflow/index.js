@@ -7,13 +7,21 @@ const nodeClassTypes = new Set([
   "Any API Node",
 ]);
 
-export const modifyWorkflow = (workflow: any, options: Record<string, any>) => {
+/**
+ * @param {any} workflow
+ * @param {Record<string, any>} options
+ */
+export const modifyWorkflow = (workflow, options) => {
   return Object.fromEntries(
     Object.entries(workflow).map(([k, v]) => [k, modifyNode(v, options)])
   );
 };
 
-const modifyNode = (node: any, options: Record<string, any>) => {
+/**
+ * @param {any} node
+ * @param {Record<string, any>} options
+ */
+const modifyNode = (node, options) => {
   if (!nodeClassTypes.has(node.class_type)) return node;
 
   const name = node.inputs.name;
@@ -27,18 +35,18 @@ const modifyNode = (node: any, options: Record<string, any>) => {
   };
 };
 
-export const invokeComfyUI = async (
-  workflow: any,
-  options: {
-    url: string;
-    username: string | undefined;
-    password: string | undefined;
-  }
-) => {
+/**
+ * @param {any} workflow
+ * @param {Object} options
+ * @param {string} options.url
+ * @param {string | undefined} options.username
+ * @param {string | undefined} options.password
+ */
+export const invokeComfyUI = async (workflow, options) => {
   const res = await fetch(`${options.url}/api/prompt`, {
     method: "POST",
     headers: {
-      // Authorization: `Basic ${btoa(`${options.username}:${options.password}`)}`,
+      Authorization: `Basic ${btoa(`${options.username}:${options.password}`)}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ prompt: workflow }),

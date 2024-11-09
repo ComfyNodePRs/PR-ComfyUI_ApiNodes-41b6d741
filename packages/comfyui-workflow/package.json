@@ -1,8 +1,10 @@
 {
-  "name": "comfyui-api-nodes",
+  "name": "@hypnodes/comfyui-api-nodes",
+  "private": false,
   "module": "index.ts",
   "main": "cli.ts",
   "type": "module",
+  "version": "2.52.1",
   "devDependencies": {
     "@types/bun": "latest"
   },

@@ -51,7 +51,11 @@ const args = () => {
   };
 };
 
-const isValidJson = (json: string) => {
+/**
+ * @param {string} json
+ * @returns {boolean}
+ */
+const isValidJson = (json) => {
   try {
     JSON.parse(json);
     return true;
