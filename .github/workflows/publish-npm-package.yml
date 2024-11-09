@@ -22,6 +22,6 @@ jobs:
           node-version: "21.x"
           registry-url: "https://registry.npmjs.org"
       - run: cd ./packages/comfyui-api-nodes && npm clean-install
-      - run: cd ./packages/comfyui-api-nodes && npm publish --provenance --access public
+      - run: cd ./packages/comfyui-api-nodes && npm publish --access public
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
