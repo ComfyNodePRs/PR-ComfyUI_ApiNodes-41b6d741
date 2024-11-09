@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "./packages/comfyui-api-nodes/package.json"
+      - "packages/comfyui-api-nodes/package.json"
       - ".github/workflows/publish-npm-package.yml"
 
 jobs:
@@ -24,4 +24,4 @@ jobs:
       - run: cd ./packages/comfyui-api-nodes && npm clean-install
       - run: cd ./packages/comfyui-api-nodes && npm publish --provenance --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
