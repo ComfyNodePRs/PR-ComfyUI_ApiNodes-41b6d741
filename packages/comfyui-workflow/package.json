@@ -4,7 +4,7 @@
   "module": "index.ts",
   "main": "cli.ts",
   "type": "module",
-  "version": "2.52.1",
+  "version": "2.52.2",
   "devDependencies": {
     "@types/bun": "latest"
   },
