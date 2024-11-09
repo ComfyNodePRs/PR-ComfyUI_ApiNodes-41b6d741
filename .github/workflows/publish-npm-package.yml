@@ -24,4 +24,5 @@ jobs:
       - run: cd ./packages/comfyui-api-nodes && npm clean-install
       - run: cd ./packages/comfyui-api-nodes && npm publish --access public
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          # actions/setup-node uses this env variable to set the auth token in the .npmrc file
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
