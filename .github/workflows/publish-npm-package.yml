@@ -21,9 +21,8 @@ jobs:
         with:
           node-version: "21.x"
           registry-url: "https://registry.npmjs.org"
-      - run: cd ./packages/comfyui-workflow
       - run: pwd
-      - run: npm install
-      - run: npm publish --provenance --access public
+      - run: cd ./packages/comfyui-workflow && npm install
+      - run: cd ./packages/comfyui-workflow && npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
